@@ -10,12 +10,15 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  @include isLarge {
+  margin: 1rem 0;
+  @include isMedium {
     flex-direction: row;
   }
 
-  .ui-btn:not(:last-child) {
-    margin-right: 1rem;
+  .ui-btn-right {
+    @include isMedium {
+      margin-right: 1rem;
+    }
   }
 }
 /* General Button Style */
@@ -25,21 +28,23 @@
   font-weight: 600;
   font-style: normal;
   letter-spacing: 0.1rem;
-  line-height: 14px;
+  line-height: 1rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   // width: auto;
   padding: 1.5rem 1rem;
-  margin-bottom: 0.5rem;
   border-radius: 50px;
+  text-decoration: none;
+  margin-bottom: .5rem;
   @include btn-fade;
-  @include isLarge {
+  @include isMedium {
     // min-width: 220px;
     // max-width: 329px;
+    margin-bottom: 0;
     width: auto;
-    padding: 1.5rem 1rem;
+    padding: 1rem 1.5rem;
   }
 }
 /* Main Button Color ******************************************************** */
@@ -89,8 +94,8 @@
 
   &:hover {
     text-decoration: none;
-    background: $color-light-accent;
-    border: 1px solid $color-light-accent;
+    background: lighten($color-main, 20);
+    border: 1px solid lighten($color-main, 20);
     color: $color-white;
   }
 }

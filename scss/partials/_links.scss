@@ -1,7 +1,6 @@
 /* ************************************************************************** */
 /* Links ******************************************************************** */
 /* ************************************************************************** */
-
 /* Topbar ******************************************************************* */
 .topbar-link {
   font-family: $font-secondary;
@@ -17,9 +16,7 @@
     @include linkFade;
   }
 }
-
 /* header links ************************************************************* */
-
 .header-link {
   color: $color-white;
   font-family: $font-primary;
@@ -38,7 +35,6 @@
     color: $color-white;
   }
 }
-
 /* General Page Links ******************************************************* */
 .gen-page-link {
   @extend .body-copy;
@@ -47,6 +43,17 @@
   &:hover {
     // text-decoration: none;
     color: $color-white;
+  }
+}
+
+.sec-link-white {
+  @extend .body-copy;
+  font-weight: 700;
+  color: $color-white;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-main;
   }
 }
 
@@ -59,7 +66,6 @@
     color: $color-dark;
   }
 }
-
 /* Footer Links ************************************************************* */
 .footer-nav {
   list-style-type: none;

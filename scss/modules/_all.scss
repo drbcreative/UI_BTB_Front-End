@@ -5,6 +5,7 @@
 
 // // Optional
 @import "../vendor/bootstrap-scss/grid";
+@import "../vendor/bootstrap-scss/utilities/_spacing.scss";
 // @import "../vendor/bootstrap-scss/dropdown";
 // @import "../vendor/bootstrap-scss/nav";
 // @import "../vendor/bootstrap-scss/navbar";
@@ -16,5 +17,5 @@
 // Site THEME
 @import "colors";
 @import 'mixins';
-@import "typography";
 @import "config";
+@import "typography";

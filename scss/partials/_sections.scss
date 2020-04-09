@@ -4,403 +4,48 @@
 // hero
 
 .hero {
-  height: 100vh;
   background: url("../images/hero-bg@2x.jpg") center center / cover;
-  background-attachment: fixed;
   position: relative;
-  .event {
+
+  &::before {
+    content: '';
     position: absolute;
-    bottom: 20px;
-    right: 40px;
-    z-index: 999;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    align-items: center;
-    p {
-      margin: 0;
-    }
-    .col-left {
-      background-color: #fff;
-      padding: .5rem 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .event-month {
-        font-family: $font-secondary;
-        font-weight: 300;
-        font-size: 12px;
-      }
-      .event-day {
-        font-family: $font-secondary;
-        font-weight: 700;
-        font-size: 30px;
-      }
-    }
-    .col-right {
-      background-image: linear-gradient(160deg, #25AAE1, #25D3E1);
-      padding: .5rem 1rem;
-      align-self: stretch;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  }
-  .hero-logo-box {
-    display: none;
-    @include isXLarge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 40px;
-      left: 0;
-      height: 182px;
-      width: 354px;
-      background-image: radial-gradient(#FFFFFF, #69BFE3);
-      box-shadow: 0 0 50px rgba($color-black, .16);
-      z-index: 99999999999;
-    }
+    top: 0;
+    left: 0;
+    background: rgba($color-dark, .7);
+    width: 100%;
+    height: 100%;
 
-    .hero-logo {
-      max-width: 283px;
-      max-height: 115px;
-    }
-  }
-
-  .containerish-fluid {
-    height: inherit;
-    background-image: linear-gradient(rgba($color-white, 0) 0, rgba($color-black, .5));
     @include isLarge {
-      background-image: linear-gradient(rgba($color-white, 0) 50%, rgba($color-black, .5));
+      opacity: 0;
     }
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-
-    .section-info {
-      text-align: center;
-      padding: 40px;
-      @include isLarge {
-        padding: 3rem 0;
-      }
-
-      p {
-        max-width: 960px;
-        margin: 0 auto;
-      }
-    }
-  }
-}
-// primary
-
-.primary-care {
-  background: url("../images/priamry-care-bg@2x.jpg") center center / cover;
-  padding: 20px;
-  @include isLarge {
-    padding: 40px 0;
-  }
-  @include isXLarge {
-    padding: 60px 0;
   }
 
   .containerish {
-    background: url("../images/priamry-care-img@2x.jpg") center center / cover;
-    height: 100vh;
-    max-height: 770px;
-    box-shadow: 0 3px 6px rgba($color-black, .16);
-    padding: 20px;
-    display: grid;
+    min-height: 100vh;
+    padding: 40px 40px 20px;
+    display: flex;
     align-items: flex-end;
+    justify-content: center;
     position: relative;
-    @include isLarge {
-      grid-template-columns: 1.5fr 1fr;
-    }
-    @include isXLarge {
-      padding: 2rem;
-      grid-template-columns: 1fr 1fr;
+
+    @include isMedium {
+      padding: 40px 40px 20px;
+      min-height: 50vh;
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: inherit;
-      width: 100%;
-      background-image: linear-gradient(0deg, rgba($color-black, .8) 60%, rgba($color-white, 0));
-      @include isLarge {
-        background-image: linear-gradient(50deg, rgba($color-black, .7) 30%, rgba($color-white, 0) 70%);
-      }
+    @include isLarge {
+      padding: 50px 0;
+      min-height: 100vh;
     }
 
     .section-info {
-      text-align: center;
-      z-index: 20;
-      @include isLarge {
-        text-align: left;
+      h1 {
+        text-align: center;
       }
-    }
-  }
-}
-// about us
-
-.aboutus {
-  background: url("../images/about-bg@2x.jpg") center center / cover;
-  padding: 40px;
-  overflow: visible;
-  @include isXLarge {
-    height: 535px;
-    padding: 0;
-  }
-
-  .containerish {
-    display: grid;
-    grid-gap: 2rem;
-    align-items: center;
-    @include isLarge {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .section-img {
-      max-width: 617px;
-      box-shadow: 0 0 50px rgba($color-black, .16);
-      @include isXLarge {
-        margin-top: 30px;
-      }
-    }
-
-    .section-info {
-      @include isXLarge {
-        padding: 2rem;
-      }
-    }
-  }
-}
-// testimonial
-
-.testimonial {
-  background: url("../images/testimonial-bg@2x.jpg") center center / cover;
-
-  .containerish {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    @include isLarge {
-      padding: 60px 0;
-    }
-    @include isXLarge {
-      padding-top: 8rem;
-    }
-    @include isRetina {
-      padding: 12rem 0 5rem;
-    }
-
-    .section-info {
-      img {
-        max-width: 92.31px;
-        max-height: 67.04px;
-      }
-      text-align: center;
-
-      h2 {
-        line-height: 60px !important;
-      }
-
       p {
-        margin: 0;
-      }
-    }
-  }
-}
-// icon
-.icon {
-  @include isMedium {
-    padding: 40px 0;
-  }
-  @include isLarge {
-    padding: 60px 0;
-  }
-  .ui-btn-main {
-    margin: 0;
-  }
-  .containerish {
-    display: grid;
-    @include isLarge {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .icon-wrapper {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      height: 588px;
-      @include isGiant {
-        height: 950px;
-      }
-
-      &:nth-child(1) {
-        background: url('../images/skin-rejuvenation-bg@2x.jpg') center center / cover;
-      }
-      &:nth-child(2) {
-        background: url('../images/laserhairremoval-bg@2x.jpg') center center / cover;
-      }
-      &:nth-child(3) {
-        background: url('../images/iconthreeforme-bg@2x.jpg') center center / cover;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-image: linear-gradient(rgba($color-black, 0) 30%, rgba($color-black, .5));
-        z-index: 6;
-      }
-
-      .icon-info {
-        padding: 20px;
-        z-index: 10;
-
-        p {
-          line-height: 27px;
-        }
-      }
-    }
-  }
-
-  .section-footer {
-    padding: 40px;
-    text-align: center;
-    p {
-      max-width: 690px;
-      margin: 0 auto;
-    }
-    @include isLarge {
-      padding: 60px 40px 0 40px;
-    }
-  }
-}
-
-// river
-.river {
-  height: 60vh;
-  background: url('../images/parallax-river@2x.jpg') center center / cover;
-  background-attachment: fixed;
-
-  @include isMedium {
-    max-height: 304px;
-  }
-  @include isGiant {
-    max-height: 604px;
-  }
-}
-
-// iv-hormone
-.iv-hormone {
-  background: url('../images/ivhrt-bg@2x.jpg') center center / cover;
-  .containerish {
-    padding: 40px;
-    display: grid;
-    align-items: flex-end;
-    grid-gap: 2rem;
-    @include isLarge {
-      padding: 40px 0;
-    }
-    @include isXLarge {
-      grid-template-columns: 1fr 1fr;
-      grid-row-gap: 3rem;
-      padding: 80px 0;
-    }
-    .iv-info {
-      @include isXLarge {
-        padding: 1rem 3rem;
-      }
-      @include isRetina {
-        margin-bottom: 4rem;
-      }
-    }
-    .hormone-image {
-      @include isXLarge {
-        grid-column: 2;
-        grid-row: 2;
-      }
-    }
-    .hormone-info {
-      @include isXLarge {
-        grid-column: 1;
-        grid-row: 2;
-        padding: 1rem 3rem;
-      }
-      @include isRetina {
-        margin-bottom: 4rem;
-      }
-    }
-  }
-}
-
-// appoitnment
-.appointment {
-  padding: 20px;
-  @include isLarge {
-    padding: 40px 0;
-  }
-  @include isXLarge {
-    padding: 40px 0;
-  }
-  .containerish {
-    background: url('../images/form-bg@2x.jpg') center center / cover;
-    padding: 20px;
-    text-align: center;
-    @include isLarge {
-      padding: 40px;
-    }
-    @include isXLarge {
-      padding: 60px;
-    }
-    @include isGiant {
-      padding: 120px 0;
-    }
-
-    p {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    a {
-      color: $color-white;
-      font-weight: 700;
-      &:hover {
-        color: lighten($color-light-accent, 20);
-      }
-    }
-
-    #request {
-      display: grid;
-      grid-gap: 1rem;
-      @include isLarge {
-        max-width: 750px;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 4rem;
-        margin: 0 auto;
-      }
-      @include isXLarge {
-        margin-top: 2rem !important;
-      }
-      input {
-        height: 53px;
-        padding: 1rem;
-        border: none;
-      }
-      button {
-        @include isLarge {
-          grid-column: 1 / -1;
-          justify-self: center;
-        }
+        max-width: 970px;
+        text-align: center;
       }
     }
   }
