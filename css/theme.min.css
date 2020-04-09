@@ -3189,6 +3189,9 @@ img {
     @media screen and (min-width: 992px) {
       .adult-ped-med .containerish {
         padding: 80px 40px; } }
+    @media screen and (min-width: 1200px) {
+      .adult-ped-med .containerish {
+        padding: 80px 0; } }
     .adult-ped-med .containerish .sec-info {
       display: -webkit-box;
       display: flex;

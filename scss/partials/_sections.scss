@@ -190,6 +190,9 @@
     @include isLarge {
       padding: 80px 40px;
     }
+    @include isXLarge {
+      padding: 80px 0;
+    }
     .sec-info {
       display: flex;
       flex-direction: column;
