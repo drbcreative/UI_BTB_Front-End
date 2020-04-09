@@ -2459,16 +2459,16 @@ h2 {
 h3, h4, h5, .appointment-page-link, h6 {
   font-family: "Josefin Sans", sans-serif; }
 
-.body-copy, .gen-page-link, .sec-link-white, .footer-link {
+.body-copy, .gen-page-link, .sec-link-white, .sec-link-dark, .footer-link {
   font-size: 1.125rem;
   line-height: calc(1.125rem * 2);
   font-family: "Lato", sans-serif;
   font-weight: 400; }
-  .body-copy.is-light, .is-light.gen-page-link, .is-light.sec-link-white, .is-light.footer-link {
+  .body-copy.is-light, .is-light.gen-page-link, .is-light.sec-link-white, .is-light.sec-link-dark, .is-light.footer-link {
     font-weight: 300; }
-  .body-copy.is-italic, .is-italic.gen-page-link, .is-italic.sec-link-white, .is-italic.footer-link {
+  .body-copy.is-italic, .is-italic.gen-page-link, .is-italic.sec-link-white, .is-italic.sec-link-dark, .is-italic.footer-link {
     font-style: italic; }
-  .body-copy.is-bold, .is-bold.gen-page-link, .is-bold.sec-link-white, .is-bold.footer-link {
+  .body-copy.is-bold, .is-bold.gen-page-link, .is-bold.sec-link-white, .is-bold.sec-link-dark, .is-bold.footer-link {
     font-weight: 700; }
 
 /* Lead Text (hero) */
@@ -2503,11 +2503,11 @@ input {
 
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 1.5rem;
-    line-height: 1.5rem; }
+    font-size: 2rem;
+    line-height: 2rem; }
   h2 {
-    font-size: 2rem !important;
-    line-height: 2rem !important; } }
+    font-size: 1rem !important;
+    line-height: 1rem !important; } }
 
 /* ************************************************************************** */
 /* Animation **************************************************************** */
@@ -2588,6 +2588,13 @@ input {
   text-decoration: none; }
   .sec-link-white:hover {
     color: #1E676C; }
+
+.sec-link-dark {
+  font-weight: 700;
+  color: #222A2A;
+  text-decoration: none; }
+  .sec-link-dark:hover {
+    color: #34b3bc; }
 
 .appointment-page-link {
   color: #F8F7F7; }
@@ -3066,7 +3073,7 @@ img {
 
 @media screen and (min-width: 992px) {
   .about {
-    padding: 60px 0; } }
+    padding: 60px 40px; } }
 
 .about .containerish .about-us {
   background: url("../images/about-bg@2x.jpg") center center/cover;
@@ -3100,7 +3107,7 @@ img {
       -webkit-transform: translateY(-20%);
               transform: translateY(-20%);
       margin-left: 1rem; }
-  .about .containerish .direct-pt-care p.body-copy, .about .containerish .direct-pt-care p.gen-page-link, .about .containerish .direct-pt-care p.sec-link-white, .about .containerish .direct-pt-care p.footer-link {
+  .about .containerish .direct-pt-care p.body-copy, .about .containerish .direct-pt-care p.gen-page-link, .about .containerish .direct-pt-care p.sec-link-white, .about .containerish .direct-pt-care p.sec-link-dark, .about .containerish .direct-pt-care p.footer-link {
     max-width: 948px; }
   .about .containerish .direct-pt-care .d-pt-care-cards {
     margin-top: 2rem;
@@ -3113,7 +3120,7 @@ img {
       .about .containerish .direct-pt-care .d-pt-care-cards {
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 1rem; } }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1200px) {
       .about .containerish .direct-pt-care .d-pt-care-cards {
         grid-gap: 2rem; } }
     .about .containerish .direct-pt-care .d-pt-care-cards .card {
@@ -3155,8 +3162,47 @@ img {
       -webkit-transform: translateY(-20%);
               transform: translateY(-20%);
       margin-left: 1rem; }
-  .about .containerish .concierge-care p.body-copy, .about .containerish .concierge-care p.gen-page-link, .about .containerish .concierge-care p.sec-link-white, .about .containerish .concierge-care p.footer-link {
+  .about .containerish .concierge-care p.body-copy, .about .containerish .concierge-care p.gen-page-link, .about .containerish .concierge-care p.sec-link-white, .about .containerish .concierge-care p.sec-link-dark, .about .containerish .concierge-care p.footer-link {
     max-width: 948px; }
+
+.adult-ped-med {
+  background: url("../images/adult-peds-med-bg@2x.jpg") center left/cover;
+  position: relative; }
+  .adult-ped-med::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(244, 186, 115, 0.6); }
+    @media screen and (min-width: 992px) {
+      .adult-ped-med::before {
+        display: none; } }
+  .adult-ped-med .containerish {
+    padding: 40px;
+    position: relative; }
+    @media screen and (min-width: 992px) {
+      .adult-ped-med .containerish {
+        padding: 60px 40px;
+        height: 743px; } }
+    @media screen and (min-width: 992px) {
+      .adult-ped-med .containerish {
+        padding: 80px 40px; } }
+    .adult-ped-med .containerish .sec-info {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-align: start;
+              align-items: flex-start; }
+      @media screen and (min-width: 992px) {
+        .adult-ped-med .containerish .sec-info p {
+          max-width: 716px; } }
+      @media screen and (min-width: 992px) {
+        .adult-ped-med .containerish .sec-info .ui-btn-group {
+          width: auto; } }
 
 /* ************************************************************************** */
 /* FOOTER Sections ********************************************************** */

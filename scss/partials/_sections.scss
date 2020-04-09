@@ -55,7 +55,7 @@
 .about {
   // padding: 40px;
   @include isLarge {
-    padding: 60px 0;
+    padding: 60px 40px  ;
   }
   .containerish {
     .about-us {
@@ -106,7 +106,7 @@
           grid-template-columns: repeat(4, 1fr);
           grid-gap: 1rem;
         }
-        @include isLarge {
+        @include isXLarge {
           grid-gap: 2rem;
         }
 
@@ -161,5 +161,50 @@
       }
     }
     // end concierge care
+  }
+}
+
+// adult peds medicine
+.adult-ped-med {
+  background: url('../images/adult-peds-med-bg@2x.jpg') center left / cover;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-accent, .6);
+    @include isLarge {
+      display: none;
+    }
+  }
+  .containerish {
+    padding: 40px;
+    position: relative;
+    @include isLarge {
+      padding: 60px 40px;
+      height: 743px;
+    }
+    @include isLarge {
+      padding: 80px 40px;
+    }
+    .sec-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      p {
+        @include isLarge {
+          max-width: 716px;
+        }
+      }
+      .ui-btn-group {
+        @include isLarge {
+          width: auto;
+        }
+      }
+    }
+
   }
 }
