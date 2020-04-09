@@ -54,8 +54,8 @@
 //about
 .about {
   // padding: 40px;
-  @include isLarge {
-    padding: 60px 40px  ;
+  @include isXLarge {
+    padding: 60px 40px;
   }
   .containerish {
     .about-us {
@@ -77,7 +77,7 @@
     .direct-pt-care {
       margin-top: 2rem;
       padding: 40px;
-      @include isLarge {
+      @include isXLarge {
         padding: 60px 0;
       }
 
@@ -141,7 +141,7 @@
     // concierge care
     .concierge-care {
       padding: 40px;
-      @include isLarge {
+      @include isXLarge {
         padding: 60px 0;
       }
 
@@ -191,7 +191,13 @@
       padding: 80px 40px;
     }
     @include isXLarge {
+      padding: 80px 40px;
+    }
+    @include isRetina {
       padding: 80px 0;
+    }
+    @include isGiant {
+      height: 85vh;
     }
     .sec-info {
       display: flex;
@@ -203,11 +209,44 @@
         }
       }
       .ui-btn-group {
-        @include isLarge {
+        @include isMedium {
           width: auto;
         }
       }
     }
+  }
+}
 
+// dermatology
+.dermatology {
+  .containerish {
+    padding: 40px;
+    display: grid;
+    grid-gap: 2rem;
+    @include isLarge {
+      grid-template-columns: 1fr 1.5fr;
+      padding: 60px 40px;
+    }
+    @include isXLarge {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+    @include isRetina {
+      padding: 60px 0;
+    }
+    // @include isXLarge {
+    //   grid-template-columns: 1fr 1fr;
+    //   align-items: center;
+    // }
+    .sec-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .ui-btn-group {
+        @include isMedium {
+          width: auto;
+        }
+      }
+    }
   }
 }

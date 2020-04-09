@@ -3071,7 +3071,7 @@ img {
       max-width: 970px;
       text-align: center; }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .about {
     padding: 60px 40px; } }
 
@@ -3096,7 +3096,7 @@ img {
 .about .containerish .direct-pt-care {
   margin-top: 2rem;
   padding: 40px; }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     .about .containerish .direct-pt-care {
       padding: 60px 0; } }
   .about .containerish .direct-pt-care h1 {
@@ -3151,7 +3151,7 @@ img {
 
 .about .containerish .concierge-care {
   padding: 40px; }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     .about .containerish .concierge-care {
       padding: 60px 0; } }
   .about .containerish .concierge-care h1 {
@@ -3191,7 +3191,13 @@ img {
         padding: 80px 40px; } }
     @media screen and (min-width: 1200px) {
       .adult-ped-med .containerish {
+        padding: 80px 40px; } }
+    @media screen and (min-width: 1400px) {
+      .adult-ped-med .containerish {
         padding: 80px 0; } }
+    @media screen and (min-width: 2000px) {
+      .adult-ped-med .containerish {
+        height: 85vh; } }
     .adult-ped-med .containerish .sec-info {
       display: -webkit-box;
       display: flex;
@@ -3203,9 +3209,37 @@ img {
       @media screen and (min-width: 992px) {
         .adult-ped-med .containerish .sec-info p {
           max-width: 716px; } }
-      @media screen and (min-width: 992px) {
+      @media screen and (min-width: 768px) {
         .adult-ped-med .containerish .sec-info .ui-btn-group {
           width: auto; } }
+
+.dermatology .containerish {
+  padding: 40px;
+  display: grid;
+  grid-gap: 2rem; }
+  @media screen and (min-width: 992px) {
+    .dermatology .containerish {
+      grid-template-columns: 1fr 1.5fr;
+      padding: 60px 40px; } }
+  @media screen and (min-width: 1200px) {
+    .dermatology .containerish {
+      grid-template-columns: 1fr 1fr;
+      -webkit-box-align: center;
+              align-items: center; } }
+  @media screen and (min-width: 1400px) {
+    .dermatology .containerish {
+      padding: 60px 0; } }
+  .dermatology .containerish .sec-info {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: start;
+            align-items: flex-start; }
+    @media screen and (min-width: 768px) {
+      .dermatology .containerish .sec-info .ui-btn-group {
+        width: auto; } }
 
 /* ************************************************************************** */
 /* FOOTER Sections ********************************************************** */
