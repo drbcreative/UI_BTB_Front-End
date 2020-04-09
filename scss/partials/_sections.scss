@@ -250,3 +250,52 @@
     }
   }
 }
+
+// womens care
+.womenscare {
+  background: url('../images/womenscare-bg@2x.jpg') bottom center / cover;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-white, .7);
+    @include isLarge {
+      display: none;
+    }
+  }
+  .containerish {
+    position: relative;
+    padding: 40px;
+
+    @include isMedium {
+      height: 50vh;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    @include isLarge {
+      height: 700px;
+    }
+    @include isXLarge {
+      height: 900px;
+    }
+    @include isGiant {
+      height: 85vh;
+    }
+
+    .sec-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p.body-copy {
+        text-align: center;
+        max-width: 915px;
+      }
+    }
+  }
+}

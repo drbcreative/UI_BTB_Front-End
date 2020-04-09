@@ -3241,6 +3241,53 @@ img {
       .dermatology .containerish .sec-info .ui-btn-group {
         width: auto; } }
 
+.womenscare {
+  background: url("../images/womenscare-bg@2x.jpg") bottom center/cover;
+  position: relative; }
+  .womenscare::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); }
+    @media screen and (min-width: 992px) {
+      .womenscare::before {
+        display: none; } }
+  .womenscare .containerish {
+    position: relative;
+    padding: 40px; }
+    @media screen and (min-width: 768px) {
+      .womenscare .containerish {
+        height: 50vh;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: end;
+                align-items: flex-end;
+        -webkit-box-pack: center;
+                justify-content: center; } }
+    @media screen and (min-width: 992px) {
+      .womenscare .containerish {
+        height: 700px; } }
+    @media screen and (min-width: 1200px) {
+      .womenscare .containerish {
+        height: 900px; } }
+    @media screen and (min-width: 2000px) {
+      .womenscare .containerish {
+        height: 85vh; } }
+    .womenscare .containerish .sec-info {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-align: center;
+              align-items: center; }
+      .womenscare .containerish .sec-info p.body-copy, .womenscare .containerish .sec-info p.gen-page-link, .womenscare .containerish .sec-info p.sec-link-white, .womenscare .containerish .sec-info p.sec-link-dark, .womenscare .containerish .sec-info p.footer-link {
+        text-align: center;
+        max-width: 915px; }
+
 /* ************************************************************************** */
 /* FOOTER Sections ********************************************************** */
 /* ************************************************************************** */
