@@ -48,7 +48,7 @@ h3, h4, h5, h6 {
 
 //Body Text
 .body-copy {
-  font-size: 1.125rem; // 14px
+  font-size: 1.125rem; // 18px
   line-height: calc(1.125rem * 2);
   font-family: $font-primary;
   font-weight: 400;
@@ -70,6 +70,16 @@ h3, h4, h5, h6 {
 .lead-copy {
   font-size: 1.125rem; // 18px
   line-height: calc(1.125rem * 1.5);
+  font-family: $font-primary;
+
+  &.is-bold {
+    font-weight: 700;
+  }
+}
+
+.footer-copy {
+  font-size: 1rem;
+  line-height:24px;
   font-family: $font-primary;
 
   &.is-bold {

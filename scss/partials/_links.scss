@@ -91,11 +91,12 @@
   font-size: 15px; // 16px
   line-height: calc(15px * 1.5);
   font-family: $font-primary;
-  color: $color-dark;
+  color: $color-copy;
+  text-decoration: none;
   @include linkFade;
 
   &:hover {
-    color: $color-light-accent;
+    color: $color-main;
     text-decoration: none;
     @include linkFade;
   }

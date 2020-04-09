@@ -2423,6 +2423,12 @@ body {
   height: 7px;
   background-color: #F4BA73; }
 
+.white-divider {
+  display: block;
+  width: 106px;
+  height: 7px;
+  background-color: #ffffff; }
+
 hr {
   border-color: #E1E0DF !important;
   opacity: .2;
@@ -2477,6 +2483,13 @@ h3, h4, h5, .appointment-page-link, h6 {
   line-height: calc(1.125rem * 1.5);
   font-family: "Lato", sans-serif; }
   .lead-copy.is-bold {
+    font-weight: 700; }
+
+.footer-copy {
+  font-size: 1rem;
+  line-height: 24px;
+  font-family: "Lato", sans-serif; }
+  .footer-copy.is-bold {
     font-weight: 700; }
 
 /* Footer2 Text */
@@ -2614,11 +2627,12 @@ input {
   font-size: 15px;
   line-height: calc(15px * 1.5);
   font-family: "Lato", sans-serif;
-  color: #000;
+  color: #222A2A;
+  text-decoration: none;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out; }
   .footer-nav-link:hover {
-    color: #E1E0DF;
+    color: #1E676C;
     text-decoration: none;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out; }
@@ -3288,66 +3302,200 @@ img {
         text-align: center;
         max-width: 915px; }
 
+.nutritional {
+  background: url("../images/nutritional-bg@2x.jpg") center center/cover;
+  overflow: hidden; }
+  .nutritional .containerish-fluid {
+    height: 100vh;
+    display: grid;
+    -webkit-box-align: center;
+            align-items: center;
+    padding: 20px; }
+    @media screen and (min-width: 768px) {
+      .nutritional .containerish-fluid {
+        height: 50vh; } }
+    @media screen and (min-width: 992px) {
+      .nutritional .containerish-fluid {
+        grid-template-columns: 1fr 1.5fr;
+        height: 663px;
+        padding: 0; } }
+    @media screen and (min-width: 1200px) {
+      .nutritional .containerish-fluid {
+        grid-template-columns: 1fr 1fr;
+        height: 663px;
+        padding: 0; } }
+    .nutritional .containerish-fluid .sec-info {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+              align-items: center; }
+      @media screen and (min-width: 768px) {
+        .nutritional .containerish-fluid .sec-info {
+          -webkit-box-pack: center;
+                  justify-content: center;
+          -webkit-box-align: start;
+                  align-items: flex-start;
+          padding: 2rem; } }
+      @media screen and (min-width: 992px) {
+        .nutritional .containerish-fluid .sec-info {
+          grid-column: 2;
+          padding: 3rem; } }
+      @media screen and (min-width: 1400px) {
+        .nutritional .containerish-fluid .sec-info {
+          padding: 5rem; } }
+      .nutritional .containerish-fluid .sec-info .ui-btn-group {
+        margin-bottom: 0; }
+        @media screen and (min-width: 768px) {
+          .nutritional .containerish-fluid .sec-info .ui-btn-group {
+            width: auto; } }
+
+.aesthetics {
+  background-color: rgba(30, 103, 108, 0.4); }
+  .aesthetics .containerish-fluid {
+    display: grid; }
+    @media screen and (min-width: 1200px) {
+      .aesthetics .containerish-fluid {
+        grid-template-columns: 1fr 1fr;
+        -webkit-box-align: center;
+                align-items: center; } }
+    @media screen and (min-width: 1400px) {
+      .aesthetics .containerish-fluid {
+        grid-template-columns: 1fr 1.1fr;
+        -webkit-box-align: center;
+                align-items: center; } }
+    .aesthetics .containerish-fluid .sec-info {
+      padding: 40px;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-align: center;
+              align-items: center; }
+      @media screen and (min-width: 1200px) {
+        .aesthetics .containerish-fluid .sec-info {
+          padding: 5rem 3rem; } }
+      @media screen and (min-width: 1400px) {
+        .aesthetics .containerish-fluid .sec-info {
+          padding: 7rem 6rem; } }
+      @media screen and (min-width: 2000px) {
+        .aesthetics .containerish-fluid .sec-info {
+          padding: 12rem 10rem; } }
+      .aesthetics .containerish-fluid .sec-info .sec-logo {
+        max-width: 202px; }
+      .aesthetics .containerish-fluid .sec-info .ui-btn-group {
+        width: auto;
+        align-self: stretch; }
+    .aesthetics .containerish-fluid .sec-img {
+      background: url("../images/aesthetics-img@2x.jpg") center center/cover;
+      height: 700px;
+      align-self: stretch; }
+      @media screen and (min-width: 1200px) {
+        .aesthetics .containerish-fluid .sec-img {
+          height: auto; } }
+
+.appointment .containerish-fluid {
+  padding: 40px;
+  display: grid;
+  grid-gap: 2rem; }
+  @media screen and (min-width: 1200px) {
+    .appointment .containerish-fluid {
+      grid-template-columns: 1fr 1fr;
+      -webkit-box-align: start;
+              align-items: flex-start;
+      padding: 60px 0; } }
+  @media screen and (min-width: 1400px) {
+    .appointment .containerish-fluid {
+      -webkit-box-align: center;
+              align-items: center; } }
+  @media screen and (min-width: 1200px) {
+    .appointment .containerish-fluid .sec-info {
+      padding: 0 40px; } }
+  @media screen and (min-width: 1400px) {
+    .appointment .containerish-fluid .sec-info {
+      padding: 0 6rem; } }
+  @media screen and (min-width: 2000px) {
+    .appointment .containerish-fluid .sec-info {
+      padding: 0 10rem; } }
+  .appointment .containerish-fluid .sec-info p.body-copy, .appointment .containerish-fluid .sec-info p.gen-page-link, .appointment .containerish-fluid .sec-info p.sec-link-white, .appointment .containerish-fluid .sec-info p.sec-link-dark, .appointment .containerish-fluid .sec-info p.footer-link {
+    max-width: 535px; }
+  .appointment .containerish-fluid .sec-info #appointment {
+    margin-top: 2rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column; }
+    .appointment .containerish-fluid .sec-info #appointment input {
+      height: 47px;
+      border: 1px solid #1E676C;
+      padding-left: 1rem;
+      margin-bottom: .5rem; }
+      @media screen and (min-width: 992px) {
+        .appointment .containerish-fluid .sec-info #appointment input {
+          max-width: 361px; } }
+    @media screen and (min-width: 1200px) {
+      .appointment .containerish-fluid .sec-info #appointment button {
+        align-self: flex-start;
+        width: auto; } }
+
 /* ************************************************************************** */
 /* FOOTER Sections ********************************************************** */
 /* ************************************************************************** */
 /* footer 1 ***************************************************************** */
 .footer-1 {
-  background: url("../images/footer-bg@2x.jpg") center center/cover;
-  position: relative; }
-  .footer-1 .containerish {
-    padding: 40px 40px 0;
+  background: #F8F7F7; }
+  .footer-1 .sec-link-dark {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+    text-decoration: none; }
+  .footer-1 .containerish-fluid {
+    padding: 40px;
     display: grid;
-    grid-gap: 2rem;
-    overflow: visible; }
-    @media screen and (min-width: 992px) {
-      .footer-1 .containerish {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        padding: 40px 0 0; } }
+    grid-gap: 2rem; }
+    @media screen and (min-width: 768px) {
+      .footer-1 .containerish-fluid {
+        grid-template-columns: -webkit-max-content repeat(3, 1fr);
+        grid-template-columns: max-content repeat(3, 1fr); } }
     @media screen and (min-width: 1200px) {
-      .footer-1 .containerish {
-        padding: 80px 0 40px; } }
-    .footer-1 .containerish .col-four,
-    .footer-1 .containerish .col-one,
-    .footer-1 .containerish .col-three,
-    .footer-1 .containerish .col-two {
+      .footer-1 .containerish-fluid {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 40px 0; } }
+    @media screen and (min-width: 1200px) {
+      .footer-1 .containerish-fluid .col-two, .footer-1 .containerish-fluid .col-three, .footer-1 .containerish-fluid .col-four {
+        padding-top: 2rem; } }
+    .footer-1 .containerish-fluid .col-one {
       display: -webkit-box;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-              flex-direction: column; }
-    .footer-1 .containerish .col-one .footer-logo {
-      max-width: 246px; }
-    @media screen and (min-width: 1200px) {
-      .footer-1 .containerish .col-one {
-        border-right: 1px solid rgba(0, 0, 0, 0.2); } }
-    .footer-1 .containerish .col-two p {
-      line-height: 30px; }
-    @media screen and (min-width: 1200px) {
-      .footer-1 .containerish .col-two {
-        border-right: 1px solid rgba(0, 0, 0, 0.2); } }
-    .footer-1 .containerish .col-four {
-      -webkit-box-align: center;
-              align-items: center;
-      position: relative; }
-      .footer-1 .containerish .col-four .footer-couple {
-        max-width: 472px; }
+      -webkit-box-pack: center;
+              justify-content: center; }
+      .footer-1 .containerish-fluid .col-one .footer-logo {
+        max-width: 201px; }
+        @media screen and (min-width: 768px) {
+          .footer-1 .containerish-fluid .col-one .footer-logo {
+            max-width: 45px;
+            max-height: 50px; } }
         @media screen and (min-width: 992px) {
-          .footer-1 .containerish .col-four .footer-couple {
-            position: absolute;
-            width: 300px;
-            right: -25px;
-            bottom: 0; } }
-        @media screen and (min-width: 1200px) {
-          .footer-1 .containerish .col-four .footer-couple {
-            width: 425px;
-            right: -25px;
-            bottom: -40px; } }
+          .footer-1 .containerish-fluid .col-one .footer-logo {
+            max-width: 201px;
+            max-height: 206px; } }
+    .footer-1 .containerish-fluid .col-two .social-links {
+      margin-top: 1rem; }
+      .footer-1 .containerish-fluid .col-two .social-links svg {
+        max-height: 20px;
+        color: #1E676C; }
 
 .footer-2 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#25AAE1), to(#25D3E1));
-  background-image: linear-gradient(#25AAE1, #25D3E1);
-  padding: 10px 0; }
+  background: #1E676C;
+  padding: 5px 0; }
   .footer-2 p {
     margin: 0; }
   .footer-2 a {
@@ -3355,38 +3503,8 @@ img {
     .footer-2 a:hover {
       color: white;
       text-decoration: none; }
-  .footer-2 .containerish {
-    display: grid; }
-    @media screen and (min-width: 768px) {
-      .footer-2 .containerish {
-        grid-template-columns: -webkit-max-content 1fr;
-        grid-template-columns: max-content 1fr;
-        -webkit-box-align: center;
-                align-items: center; } }
-    @media screen and (min-width: 992px) {
-      .footer-2 .containerish {
-        grid-template-columns: 1fr 3fr 1fr;
-        -webkit-box-align: center;
-                align-items: center; } }
-    .footer-2 .containerish .col-left {
-      display: -webkit-box;
-      display: flex;
-      -webkit-box-pack: center;
-              justify-content: center; }
-      .footer-2 .containerish .col-left i:not(last-child) {
-        margin-right: 1rem; }
-      @media screen and (min-width: 992px) {
-        .footer-2 .containerish .col-left {
-          -webkit-box-pack: start;
-                  justify-content: flex-start; } }
-    .footer-2 .containerish .col-center {
-      text-align: center; }
-      @media screen and (min-width: 768px) {
-        .footer-2 .containerish .col-center {
-          text-align: right; } }
-      @media screen and (min-width: 992px) {
-        .footer-2 .containerish .col-center {
-          text-align: center; } }
-    .footer-2 .containerish .col-right {
-      display: none; }
+  .footer-2 .containerish .sec-info {
+    text-align: center; }
+    .footer-2 .containerish .sec-info a {
+      text-decoration: none; }
 /*# sourceMappingURL=theme.min.css.map */

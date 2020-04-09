@@ -3,66 +3,58 @@
 /* ************************************************************************** */
 /* footer 1 ***************************************************************** */
 .footer-1 {
-  background: url("../images/footer-bg@2x.jpg") center center / cover;
-  position: relative;
-  @include isXLarge {
-    // height: 440px;
+  background: #F8F7F7;
+
+  .sec-link-dark {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+    text-decoration: none;
   }
 
-  .containerish {
-    padding: 40px 40px 0;
+  .containerish-fluid {
+    padding: 40px;
     display: grid;
     grid-gap: 2rem;
-    overflow: visible;
-    @include isLarge {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      padding: 40px 0 0;
-    }
-    @include isXLarge {
-      padding: 80px 0 40px;
+
+    @include isMedium {
+      grid-template-columns: max-content repeat(3, 1fr);
     }
 
-    .col-four,
-    .col-one,
-    .col-three,
-    .col-two {
-      display: flex;
-      flex-direction: column;
+    @include isXLarge {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 40px 0;
+    }
+
+
+    .col-two, .col-three, .col-four {
+      @include isXLarge {
+        padding-top: 2rem;
+      }
     }
 
     .col-one {
+      display: flex;
+      justify-content: center;
       .footer-logo {
-        max-width: 246px;
-      }
-      @include isXLarge {
-        border-right: 1px solid rgba($color-dark, .20);
+        max-width: 201px;
+        @include isMedium {
+          max-width: 45px;
+          max-height: 50px;
+        }
+        @include isLarge {
+          max-width: 201px;
+          max-height: 206px;
+        }
       }
     }
     .col-two {
-      p {
-        line-height: 30px;
-      }
-      @include isXLarge {
-        border-right: 1px solid rgba($color-dark, .20);
-      }
-    }
+      .social-links {
+        margin-top: 1rem;
 
-    .col-four {
-      align-items: center;
-      position: relative;
-
-      .footer-couple {
-        max-width: 472px;
-        @include isLarge {
-          position: absolute;
-          width: 300px;
-          right: -25px;
-          bottom: 0;
-        }
-        @include isXLarge {
-          width: 425px;
-          right: -25px;
-          bottom: -40px;
+        svg {
+          max-height: 20px;
+          color: $color-main;
         }
       }
     }
@@ -70,8 +62,8 @@
 }
 // footer 2
 .footer-2 {
-  background-image: linear-gradient(#25AAE1, #25D3E1);
-  padding: 10px 0;
+  background: $color-main;
+  padding: 5px 0;
 
   p {
     margin: 0;
@@ -87,39 +79,12 @@
   }
 
   .containerish {
-    display: grid;
-    @include isMedium {
-      grid-template-columns: max-content 1fr;
-      align-items: center;
-    }
-    @include isLarge {
-      grid-template-columns: 1fr 3fr 1fr;
-      align-items: center;
-    }
-    .col-left {
-      display: flex;
-      justify-content: center;
 
-      i:not(last-child) {
-        margin-right: 1rem;
-      }
-      @include isLarge {
-        justify-content: flex-start;
-      }
-    }
-
-    .col-center {
+    .sec-info {
       text-align: center;
-      @include isMedium {
-        text-align: right;
+      a {
+        text-decoration: none;
       }
-      @include isLarge {
-        text-align: center;
-      }
-    }
-
-    .col-right {
-      display: none;
     }
   }
 }
