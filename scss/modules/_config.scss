@@ -70,3 +70,16 @@ body {
   width: 100%;
   max-width: 1300px;
 }
+
+.yellow-divider {
+	display: block;
+	width: 106px;
+	height: 7px;
+	background-color: $color-accent;
+}
+
+hr {
+	border-color: #E1E0DF !important;
+	opacity: .2;
+	margin: 0;
+}

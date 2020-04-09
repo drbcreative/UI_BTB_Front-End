@@ -2417,6 +2417,17 @@ body {
   width: 100%;
   max-width: 1300px; }
 
+.yellow-divider {
+  display: block;
+  width: 106px;
+  height: 7px;
+  background-color: #F4BA73; }
+
+hr {
+  border-color: #E1E0DF !important;
+  opacity: .2;
+  margin: 0; }
+
 /* ************************************************************************** */
 /* Typography *************************************************************** */
 /* ************************************************************************** */
@@ -2451,7 +2462,8 @@ h3, h4, h5, .appointment-page-link, h6 {
 .body-copy, .gen-page-link, .sec-link-white, .footer-link {
   font-size: 1.125rem;
   line-height: calc(1.125rem * 2);
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  font-weight: 400; }
   .body-copy.is-light, .is-light.gen-page-link, .is-light.sec-link-white, .is-light.footer-link {
     font-weight: 300; }
   .body-copy.is-italic, .is-italic.gen-page-link, .is-italic.sec-link-white, .is-italic.footer-link {
@@ -3044,13 +3056,107 @@ img {
         min-height: 50vh; } }
     @media screen and (min-width: 992px) {
       .hero .containerish {
-        padding: 50px 0;
+        padding: 50px 40px;
         min-height: 100vh; } }
     .hero .containerish .section-info h1 {
       text-align: center; }
     .hero .containerish .section-info p {
       max-width: 970px;
       text-align: center; }
+
+@media screen and (min-width: 992px) {
+  .about {
+    padding: 60px 0; } }
+
+.about .containerish .about-us {
+  background: url("../images/about-bg@2x.jpg") center center/cover;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding: 40px; }
+  @media screen and (min-width: 992px) {
+    .about .containerish .about-us {
+      padding: 60px; } }
+  .about .containerish .about-us p {
+    max-width: 890px; }
+
+.about .containerish .direct-pt-care {
+  margin-top: 2rem;
+  padding: 40px; }
+  @media screen and (min-width: 992px) {
+    .about .containerish .direct-pt-care {
+      padding: 60px 0; } }
+  .about .containerish .direct-pt-care h1 {
+    position: relative; }
+    .about .containerish .direct-pt-care h1::after {
+      content: url("../images/arrow-down.png");
+      position: absolute;
+      -webkit-transform: translateY(-20%);
+              transform: translateY(-20%);
+      margin-left: 1rem; }
+  .about .containerish .direct-pt-care p.body-copy, .about .containerish .direct-pt-care p.gen-page-link, .about .containerish .direct-pt-care p.sec-link-white, .about .containerish .direct-pt-care p.footer-link {
+    max-width: 948px; }
+  .about .containerish .direct-pt-care .d-pt-care-cards {
+    margin-top: 2rem;
+    display: grid;
+    grid-gap: 2rem; }
+    @media screen and (min-width: 768px) {
+      .about .containerish .direct-pt-care .d-pt-care-cards {
+        grid-template-columns: 1fr 1fr; } }
+    @media screen and (min-width: 992px) {
+      .about .containerish .direct-pt-care .d-pt-care-cards {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem; } }
+    @media screen and (min-width: 992px) {
+      .about .containerish .direct-pt-care .d-pt-care-cards {
+        grid-gap: 2rem; } }
+    .about .containerish .direct-pt-care .d-pt-care-cards .card {
+      border-radius: 10px;
+      border: solid 1px #E1E0DF; }
+      .about .containerish .direct-pt-care .d-pt-care-cards .card .card-header {
+        background: #1E676C;
+        height: 91px;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+                justify-content: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px; }
+      .about .containerish .direct-pt-care .d-pt-care-cards .card .card-body {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        -webkit-box-align: center;
+                align-items: center;
+        padding: 2rem 0; }
+        .about .containerish .direct-pt-care .d-pt-care-cards .card .card-body p:nth-child(2) {
+          margin-bottom: 1.5rem; }
+
+.about .containerish .concierge-care {
+  padding: 40px; }
+  @media screen and (min-width: 992px) {
+    .about .containerish .concierge-care {
+      padding: 60px 0; } }
+  .about .containerish .concierge-care h1 {
+    position: relative; }
+    .about .containerish .concierge-care h1::after {
+      content: url("../images/arrow-right.png");
+      position: absolute;
+      -webkit-transform: translateY(-20%);
+              transform: translateY(-20%);
+      margin-left: 1rem; }
+  .about .containerish .concierge-care p.body-copy, .about .containerish .concierge-care p.gen-page-link, .about .containerish .concierge-care p.sec-link-white, .about .containerish .concierge-care p.footer-link {
+    max-width: 948px; }
 
 /* ************************************************************************** */
 /* FOOTER Sections ********************************************************** */

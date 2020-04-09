@@ -35,7 +35,7 @@
     }
 
     @include isLarge {
-      padding: 50px 0;
+      padding: 50px 40px;
       min-height: 100vh;
     }
 
@@ -48,5 +48,118 @@
         text-align: center;
       }
     }
+  }
+}
+
+//about
+.about {
+  // padding: 40px;
+  @include isLarge {
+    padding: 60px 0;
+  }
+  .containerish {
+    .about-us {
+      background: url('../images/about-bg@2x.jpg') center center / cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      @include isLarge {
+        padding: 60px;
+      }
+
+      p {
+        max-width: 890px;
+      }
+    }
+    // direct pt care
+    .direct-pt-care {
+      margin-top: 2rem;
+      padding: 40px;
+      @include isLarge {
+        padding: 60px 0;
+      }
+
+      h1 {
+        position: relative;
+        &::after {
+          content: url('../images/arrow-down.png');
+          position: absolute;
+          // top: 50%;
+          transform: translateY(-20%);
+          margin-left: 1rem;
+        }
+      }
+
+      p.body-copy {
+        max-width: 948px;
+      }
+      .d-pt-care-cards {
+        margin-top: 2rem;
+        display: grid;
+        grid-gap: 2rem;
+        @include isMedium {
+          grid-template-columns: 1fr 1fr;
+        }
+        @include isLarge {
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 1rem;
+        }
+        @include isLarge {
+          grid-gap: 2rem;
+        }
+
+        .card {
+          border-radius: 10px;
+          border: solid 1px #E1E0DF;
+
+          .card-header {
+            background: $color-main;
+            height: 91px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+          }
+          .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+
+            p:nth-child(2) {
+              margin-bottom: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+    // end direct pt care
+
+    // concierge care
+    .concierge-care {
+      padding: 40px;
+      @include isLarge {
+        padding: 60px 0;
+      }
+
+      h1 {
+        position: relative;
+        &::after {
+          content: url('../images/arrow-right.png');
+          position: absolute;
+          // top: 50%;
+          transform: translateY(-20%);
+          margin-left: 1rem;
+        }
+      }
+
+      p.body-copy {
+        max-width: 948px;
+      }
+    }
+    // end concierge care
   }
 }

@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "31934",
 "files": {
+	"/.gitattributes": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.gitattributes",
+		"oF": 0
+		},
 	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
@@ -104,6 +112,50 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
+		"q": 100
+		},
+	"/images/arrow-down.png": {
+		"ft": 32768,
+		"iS": 299,
+		"oA": 0,
+		"oAP": "/images/arrow-down.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/arrow-down@2x.png": {
+		"ft": 32768,
+		"iS": 677,
+		"oA": 0,
+		"oAP": "/images/arrow-down@2x.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/arrow-right.png": {
+		"ft": 32768,
+		"iS": 314,
+		"oA": 0,
+		"oAP": "/images/arrow-right.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/arrow-right@2x.png": {
+		"ft": 32768,
+		"iS": 665,
+		"oA": 0,
+		"oAP": "/images/arrow-right@2x.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
 		"q": 100
 		},
 	"/images/dermatology-img@2x.jpg": {
