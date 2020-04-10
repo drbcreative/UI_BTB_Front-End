@@ -43,8 +43,8 @@
           max-height: 50px;
         }
         @include isLarge {
-          max-width: 201px;
-          max-height: 206px;
+          max-width: 210px;
+          max-height: 216px;
         }
       }
     }
@@ -52,10 +52,28 @@
       .social-links {
         margin-top: 1rem;
 
-        svg {
-          max-height: 20px;
-          color: $color-main;
+        a.social-link {
+          display: inline-block;
+          position: relative;
+          width: 30px !important;
+          height: 30px;
+          border: 1px solid $color-main;
+          border-radius: 50px;
+
+          svg {
+            max-height: 20px;
+            color: $color-main;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
         }
+      }
+    }
+    .col-three {
+      p {
+        line-height: calc(15px * 1.5);
       }
     }
   }

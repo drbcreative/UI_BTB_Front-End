@@ -4,7 +4,7 @@
 // hero
 
 .hero {
-  background: url("../images/hero-bg@2x.jpg") center center / cover;
+  background: url("../images/hero-bg@2x.jpg") top center / cover;
   position: relative;
   padding-top: 3rem;
   @include isMedium {
@@ -74,6 +74,7 @@
 
       p {
         max-width: 890px;
+        text-align: center;
       }
     }
     // direct pt care
@@ -457,7 +458,7 @@
 
         input {
           height: 47px;
-          border: 1px solid $color-main;
+          border: 2px solid $color-main;
           padding-left: 1rem;
           margin-bottom: .5rem;
           @include isLarge {
@@ -465,6 +466,7 @@
           }
         }
         button {
+          border: none;
           @include isXLarge {
             align-self: flex-start;
             width: auto;
