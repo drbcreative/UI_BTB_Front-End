@@ -202,6 +202,28 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/images/nav-dot.png": {
+		"ft": 32768,
+		"iS": 169,
+		"oA": 0,
+		"oAP": "/images/nav-dot.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/nav-dot@2x.png": {
+		"ft": 32768,
+		"iS": 273,
+		"oA": 0,
+		"oAP": "/images/nav-dot@2x.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"/images/nutritional-bg@2x.jpg": {
 		"ft": 16384,
 		"iS": 367925,

@@ -1,9 +1,7 @@
 header#header-container {
-  // background-color: #444;
   position: absolute;
   top: 0;
   width: 100%;
-  // background-image: url(../../img/hbg.png);
   background-size: cover;
   background-position: 50%;
   font-family: $font-secondary;
@@ -14,32 +12,41 @@ header#header-container {
   }
 
   section.top-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 10px 20px;
+    display: none;
 
-    .btn-container {
-      margin: 0;
+    @include isXLarge {
+      display: block;
     }
+    .containerish-fluid {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 50px 30px;
+      position: absolute;
+      top: 0;
+      width: 100%;
 
-    a.ui-btn {
-      margin-left: 30px;
-    }
+      .topbar-link {
+        color: $color-white;
+        text-decoration: none;
+        margin-left: 2rem;
+        font-size: 14px;
+        font-family: $font-secondary;
 
-    img.pic {
-      max-width: 20px;
-      max-height: 20px;
-    }
+        &:hover {
+          color: $color-accent;
+        }
+      }
+      a.social-link svg {
+        max-height: 20px;
+        color: $color-white;
+        transition: all .3s ease;
+        margin-left: 1rem;
 
-    nav.tb-links {
-      .btn-container {
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
+        &:hover {
+          color: $color-accent;
+          transition: all .3s ease;
+        }
       }
     }
   }
@@ -47,12 +54,25 @@ header#header-container {
   section.nav-container {
     display: flex;
     flex-direction: row;
-    // max-width: 1360px;
     margin: 0 auto;
-    padding: 10px 20px 5px;
+    padding: 30px 0 0 30px;
+    background: $color-main;
+    @include isLarge {
+      padding: 20px 0 20px 30px;
+    }
+    @include isXLarge {
+      background: transparent;
+      padding: 30px 15px 0 30px;
+    }
 
     .logonav {
-      max-width: 161px;
+      max-width: 50px;
+      @include isLarge {
+        max-width: 100px;
+      }
+      @include isXLarge {
+        max-width: 161px;
+      }
     }
 
     a.nav-logo {
@@ -70,14 +90,22 @@ header#header-container {
   position: absolute;
   top: 100%;
   right: 0;
+  left: 0;
   // left: 0;
-  background: #2d1d36;
+  background: $color-main;
   margin: 0;
   padding: 30px;
 }
 
 .bars span.bar {
   transition: all 0.3s;
+}
+.nav-divider {
+  display: none;
+  @include isXLarge {
+    display: block;
+    margin-top: -3px;
+  }
 }
 
 nav.navdiv {
@@ -98,7 +126,14 @@ nav.navdiv {
 
     li.menu-item {
       position: relative;
-      margin: 0;
+      margin: 0 0 10px;
+
+      @include isXLarge {
+        margin-bottom: 0;
+      }
+      @include isRetina {
+        margin: 0 0 0 20px;
+      }
 
       &.active {
         a.menu-link {
@@ -108,17 +143,20 @@ nav.navdiv {
 
       a.menu-link {
         display: block;
-        font-size: 18px;
+        font-size: 1rem;
         color: #fff;
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 400;
         letter-spacing: 0.5px;
-        padding: 0 15px;
+        padding: 0 30px;
+        @include isXLarge {
+          padding: 0 15px;
+        }
 
         &:hover {
           // background: #2d1d36;
-          color: #d09048;
+          color: $color-accent;
           // box-shadow: 0 0 0px 2px #e0b482;
         }
       }
@@ -132,7 +170,7 @@ nav.navdiv {
           visibility: hidden;
           transition: all 0.3s;
           width: 230px;
-          background: #2d1d36;
+          background: $color-main;
           left: 0;
           top: 110%;
           transform: translateY(20px);
@@ -180,10 +218,14 @@ nav.navdiv {
             transform: translateY(0px);
             // Second dropdown
             .dropmenu {
+              display: none;
               left: 100%;
               opacity: 0;
               transform: translateY(0);
               top: 0;
+              @include isXLarge {
+                display: block;
+              }
             }
             // transform: translateY(20px);
             a.menu-link {
@@ -217,28 +259,8 @@ nav.navdiv {
     }
   }
 }
-@media screen and (max-width: 1290px) {
-  header#header-container section.nav-container .logonav {
-    max-width: 75px;
-  }
 
-  nav.navdiv ul.items li.menu-item a.menu-link {
-    padding: 0 11px;
-  }
-}
-@media screen and (max-width: 1150px) {
-  nav.navdiv ul.items li.menu-item a.menu-link {
-    padding: 0 8px;
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 1040px) {
-  nav.navdiv ul.items li.menu-item a.menu-link {
-    padding: 0 6px;
-    font-size: 15px;
-  }
-}
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   nav.navdiv .closebutton {
     display: block;
   }
@@ -295,10 +317,6 @@ nav.navdiv {
   }
 
   .navbaritems {
-    display: none;
-  }
-
-  header#header-container section.top-bar {
     display: none;
   }
 }

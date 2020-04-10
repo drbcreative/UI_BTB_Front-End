@@ -6,6 +6,10 @@
 .hero {
   background: url("../images/hero-bg@2x.jpg") center center / cover;
   position: relative;
+  padding-top: 3rem;
+  @include isMedium {
+    padding-top: 0;
+  }
 
   &::before {
     content: '';

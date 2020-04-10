@@ -23,7 +23,7 @@
 
     @include isXLarge {
       grid-template-columns: repeat(4, 1fr);
-      padding: 40px 0;
+      padding: 40px 30px;
     }
 
 
@@ -35,7 +35,7 @@
 
     .col-one {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       .footer-logo {
         max-width: 201px;
         @include isMedium {
