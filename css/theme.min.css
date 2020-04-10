@@ -2525,38 +2525,119 @@ input {
 /* ************************************************************************** */
 /* Animation **************************************************************** */
 /* ************************************************************************** */
-@-webkit-keyframes searchIn {
-  from {
-    display: none;
-    opacity: 0; }
-  to {
-    display: block;
-    opacity: 1; } }
-@keyframes searchIn {
-  from {
-    display: none;
-    opacity: 0; }
-  to {
-    display: block;
-    opacity: 1; } }
+/* ANIMATION STYLES */
+.fade-nun {
+  opacity: 0;
+  visibility: hidden; }
 
-@-webkit-keyframes searchOut {
-  from {
-    display: -webkit-box;
-    display: flex;
-    opacity: 1; }
-  to {
-    opacity: 0;
-    display: none; } }
+.fade-nun.animate {
+  -webkit-animation: fade-nun 1.2s cubic-bezier(0.08, 0.75, 0.59, 0.99) forwards;
+          animation: fade-nun 1.2s cubic-bezier(0.08, 0.75, 0.59, 0.99) forwards; }
 
-@keyframes searchOut {
+@-webkit-keyframes fade-nun {
   from {
-    display: -webkit-box;
-    display: flex;
-    opacity: 1; }
-  to {
     opacity: 0;
-    display: none; } }
+    -webkit-transform: scale(0.86);
+            transform: scale(0.86);
+    visibility: hidden; }
+  to {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes fade-nun {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.86);
+            transform: scale(0.86);
+    visibility: hidden; }
+  to {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.fade-up-stop {
+  opacity: 0; }
+
+.fade-up-stop.animate {
+  -webkit-animation: fade-up-stop 2s cubic-bezier(0, 1.1, 0.65, 0.91) forwards;
+          animation: fade-up-stop 2s cubic-bezier(0, 1.1, 0.65, 0.91) forwards; }
+
+@-webkit-keyframes fade-up-stop {
+  from {
+    opacity: 0;
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 40);
+            transform: matrix(1, 0, 0, 1, 0, 40); }
+  to {
+    opacity: 1;
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+            transform: matrix(1, 0, 0, 1, 0, 0); } }
+
+@keyframes fade-up-stop {
+  from {
+    opacity: 0;
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 40);
+            transform: matrix(1, 0, 0, 1, 0, 40); }
+  to {
+    opacity: 1;
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+            transform: matrix(1, 0, 0, 1, 0, 0); } }
+
+.fade-left-stop {
+  opacity: 0; }
+
+.fade-left-stop.animate {
+  -webkit-animation: fade-left-stop 2s cubic-bezier(0, 1.1, 0.65, 0.91) forwards;
+          animation: fade-left-stop 2s cubic-bezier(0, 1.1, 0.65, 0.91) forwards; }
+
+@-webkit-keyframes fade-left-stop {
+  from {
+    opacity: 0;
+    -webkit-transform: matrix(1, 0, 0, 1, 40, 0);
+            transform: matrix(1, 0, 0, 1, 40, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+            transform: matrix(1, 0, 0, 1, 0, 0); } }
+
+@keyframes fade-left-stop {
+  from {
+    opacity: 0;
+    -webkit-transform: matrix(1, 0, 0, 1, 40, 0);
+            transform: matrix(1, 0, 0, 1, 40, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+            transform: matrix(1, 0, 0, 1, 0, 0); } }
+
+.fade-right-stop {
+  opacity: 0; }
+
+.fade-right-stop.animate {
+  -webkit-animation: fade-right-stop 2s cubic-bezier(0, 1.1, 0.65, 0.91) forwards;
+          animation: fade-right-stop 2s cubic-bezier(0, 1.1, 0.65, 0.91) forwards; }
+
+@-webkit-keyframes fade-right-stop {
+  from {
+    opacity: 0;
+    -webkit-transform: matrix(1, 0, 0, 1, -40, 0);
+            transform: matrix(1, 0, 0, 1, -40, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+            transform: matrix(1, 0, 0, 1, 0, 0); } }
+
+@keyframes fade-right-stop {
+  from {
+    opacity: 0;
+    -webkit-transform: matrix(1, 0, 0, 1, -40, 0);
+            transform: matrix(1, 0, 0, 1, -40, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+            transform: matrix(1, 0, 0, 1, 0, 0); } }
 
 /* ************************************************************************** */
 /* Links ******************************************************************** */
@@ -3446,7 +3527,8 @@ img {
   @media screen and (min-width: 1400px) {
     .appointment .containerish-fluid {
       -webkit-box-align: center;
-              align-items: center; } }
+              align-items: center;
+      grid-template-columns: 1fr 1.05fr; } }
   @media screen and (min-width: 1200px) {
     .appointment .containerish-fluid .sec-info {
       padding: 0 40px; } }
