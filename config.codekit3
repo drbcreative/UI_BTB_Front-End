@@ -17,30 +17,6 @@
 		"oAP": "/.gitattributes",
 		"oF": 0
 		},
-	"/.gitignore": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/.gitignore",
-		"oF": 0
-		},
-	"/assets/Back To Basics Healthcare & Aesthetics-DEV.xd": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/Back To Basics Healthcare & Aesthetics-DEV.xd",
-		"oF": 0
-		},
-	"/assets/font list": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/font list",
-		"oF": 0
-		},
 	"/css/theme.min.css": {
 		"aP": 1,
 		"bl": 0,
